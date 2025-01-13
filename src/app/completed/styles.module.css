@@ -1,0 +1,57 @@
+.background{
+  background-color: rgb(242, 189, 133);
+}
+.formContainer {
+  height: 50vh;
+  margin: 0 auto;
+  border: 1px solid #0c0c0c;
+  background-color: white;
+  width: 80%;
+  max-width: 400px;
+  padding: 0px 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px 0px rgba(83, 84, 85, 0.4);
+}
+.uiForm{
+  display: block;
+  margin: 50px auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 400px;
+}
+.completed{
+  font-size: 25px;
+  font-weight: bold;
+  color: rgba(0, 3, 5, 0.74);
+  margin-top: 180px;
+  padding: 5px 0px;
+
+}
+.formField input {
+  background-color: aliceblue;
+    border: 1px so lid rgb(127, 127, 131);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.formField input:focus {
+  outline: none;
+}
+
+.formField label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+.topPage {
+  font-size: 18px;
+  color: rgba(246, 147, 26, 0.916);
+  margin-top: 0px;
+  padding: 5px 0px;
+}
