@@ -1,0 +1,105 @@
+.background{
+    background-color: rgb(227, 226, 193);
+}
+.flex {
+    display: flex;
+    max-width: 1600px;
+    margin: 40px auto;
+    margin-top: 110px;
+    margin-bottom: 90px;
+    justify-content: center;
+}
+.heading {
+    color: rgba(115, 112, 80, 0.896);
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.imgBox {
+    width: 20%;
+    height: 300px;
+    background-color: rgba(251, 251, 247, 0.965);
+    margin-top: 130px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #0c0c0c;
+    border-radius: 4px;
+    text-align:center;
+    position:relative;
+}
+.recipeImg{
+    color: rgba(116, 117, 117, 0.674);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+}
+.recipe {
+    width: 50%;
+    padding: 40px 5% 0 5%;
+}
+.recipeTitle {
+    width: 93%;
+    padding: 8px;
+    background-color: rgba(251, 251, 247, 0.965);
+    margin-bottom: 10px;
+    border: 1px solid #0c0c0c;
+    color: rgba(116, 117, 117, 0.674);
+    border-radius: 4px;
+}
+.categoryWrap{
+    width: 80%;
+    display: flex;
+    flex: none;
+}
+.category{
+    width: 93%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: rgba(251, 251, 247, 0.965);
+    border: 1px solid #0c0c0c;
+    color: rgba(116, 117, 117, 0.674);
+    border-radius: 4px;
+}
+.contentTitle {
+    color: #d4af36f5;
+    border-bottom: solid 1px #746969;
+    font-size: 1.25rem;
+    padding-bottom: 5px;
+    margin: 10px 0 15px 0;
+}
+.ingredientList {
+    width: 93%;
+    padding: 80px;
+    margin-bottom: 10px;
+    background-color: rgba(251, 251, 247, 0.965);
+    border: 1px solid #0c0c0c;
+    color: rgba(116, 117, 117, 0.674);
+    border-radius: 4px;
+}
+.stepList{
+    width: 93%;
+    padding: 100px;
+    margin-bottom: 10px;
+    background-color: rgba(251, 251, 247, 0.965);
+    border: 1px solid #0c0c0c;
+    color: rgba(116, 117, 117, 0.674);
+    border-radius: 4px;
+}
+
+
+@media screen and (max-width: 834px) {
+.flex {
+    flex-direction: column;
+}
+.imgBox {
+    width: 100%;
+}
+.recipeImg{
+    height: auto;
+}
+.recipe {
+    width: 100%;
+}
+}
