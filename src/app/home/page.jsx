@@ -4,8 +4,6 @@ import styles from "./styles.module.css";
 export default function Home() {
     
 return (
-  <layout>
-    <body className={styles.background}></body>
     <div className={styles.section}>
     <h1 className={styles.heading}>ALL</h1>
     <div className={styles.cardArea}>
@@ -141,6 +139,5 @@ return (
       </a>
       </div>
       </div>
-  </layout>
   );
 }
