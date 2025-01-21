@@ -1,3 +1,6 @@
+.background{
+  background-color: rgb(242, 189, 133);
+}
 .formContainer {
     height: 50vh;
     margin: 0 auto;
@@ -23,18 +26,26 @@
     height: 400px;
   }
   .userName {
-    width: 93%;
+    width: 95%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #0c0c0c;
+    color: rgba(116, 117, 117, 0.674);
+    border-radius: 4px;
+  }
+  .mailAddress{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #0c0c0c;
     color: rgba(116, 117, 117, 0.674);
     border-radius: 4px;
   }
   
   .password {
-    width: 93%;
+    width: 95%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #0c0c0c;
     color: rgba(116, 117, 117, 0.674);
     border-radius: 4px;
@@ -57,25 +68,25 @@
     margin-bottom: 3px;
   }
   
-  .button {
-    background:#1b65a5;
-    width: 100%;
-    margin-top: 10px;
+  .signin {
+    background:#f3b525d5;
+    width: 50%;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: rgb(29, 23, 2);
     padding: 10px 30px;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.3s;
   }
   
-  .button:hover {
-    background-color: #20639ec4;
+  .signin:hover {
+    background-color: #f0d068e8;
   }
   .signup
   {
     font-size: 13px;
-    color: rgba(42, 145, 242, 0.74);
+    color: rgba(170, 119, 8, 0.74);
     padding: 20px 0px;
   }
