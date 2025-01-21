@@ -1,5 +1,5 @@
 :root {
-  --background:  rgb(227, 226, 193);
+  --background: rgb(227, 226, 193);
   --foreground: #171717;
 }
 
@@ -27,4 +27,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-

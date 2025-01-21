@@ -1,4 +1,4 @@
-.background{
+.background {
   background-color: rgb(242, 189, 133);
 }
 .formContainer {
@@ -12,12 +12,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 10px;
   box-shadow: 6px 6px 10px 0px rgba(83, 84, 85, 0.4);
 }
-.uiForm{
+.uiForm {
   display: block;
   margin: 50px auto;
   flex-direction: column;
@@ -25,19 +25,18 @@
   justify-content: space-evenly;
   height: 400px;
 }
-.completed{
+.completed {
   font-size: 25px;
   font-weight: bold;
   color: rgba(0, 3, 5, 0.74);
   margin-top: 180px;
   padding: 5px 0px;
-
 }
 .formField input {
   background-color: aliceblue;
-    border: 1px so lid rgb(127, 127, 131);
-    padding: 20px;
-    border-radius: 4px;
+  border: 1px so lid rgb(127, 127, 131);
+  padding: 20px;
+  border-radius: 4px;
 }
 
 .formField input:focus {

@@ -1,4 +1,4 @@
-.header{
+.header {
   margin-top: 20px;
   position: fixed;
   top: 0;
@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
 }
-.headerInner{
+.headerInner {
   max-width: 1500px;
   width: 90%;
   height: 100%;
@@ -18,27 +18,26 @@
   justify-content: flex-start;
   align-items: center;
 }
-.appName{
+.appName {
   font-size: 30px;
   font-weight: 800;
   color: #604904;
   margin-left: 0px;
-
 }
-.headerLogo{
+.headerLogo {
   flex: none;
   width: auto;
   height: 35px;
 }
-.headerNavgroup{
+.headerNavgroup {
   margin-left: auto;
   display: flex;
   flex: none;
 }
-.headerNavgroup > * + *{
+.headerNavgroup > * + * {
   margin-left: 60px;
 }
-.headerNavitem{
+.headerNavitem {
   font-size: 16px;
   color: #fff;
 }
