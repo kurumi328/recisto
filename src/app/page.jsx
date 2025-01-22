@@ -20,18 +20,17 @@ export default function Home() {
       <h1 className={styles.heading}>ALL</h1>
       <div className={styles.cardArea}>
         {recipes.map((recipe) => (
-          <a key={recipe.recipe_id} className={styles.cardItem} href="#">
-            <div className={styles.imgBox}>
+            <a key =[], className={styles.imgBox}>
               <img
                 className={styles.cardItemImg}
                 src="./images/pc01.png"
                 alt=""
               />
-            </div>
+            </a>
             <div className={styles.cardItems}>
               <p className={styles.cardItemTtl}>{recipe.title}</p>
             </div>
-          </a>
+          </Liink>
         ))}
       </div>
     </div>
