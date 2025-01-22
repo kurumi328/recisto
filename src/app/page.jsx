@@ -32,11 +32,11 @@ export default function Home() {
                 src="./images/pc01.png"
                 alt=""
               />
-            </a>
+            </div>
             <div className={styles.cardItems}>
               <p className={styles.cardItemTtl}>{recipe.title}</p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
