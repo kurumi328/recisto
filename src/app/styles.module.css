@@ -1,46 +1,3 @@
-.header {
-  margin-top: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: #e2a728;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.headerInner {
-  max-width: 1500px;
-  width: 90%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.appName {
-  font-size: 30px;
-  font-weight: 800;
-  color: #604904;
-  margin-left: 0px;
-}
-.headerLogo {
-  flex: none;
-  width: auto;
-  height: 35px;
-}
-.headerNavgroup {
-  margin-left: auto;
-  display: flex;
-  flex: none;
-}
-.headerNavgroup > * + * {
-  margin-left: 60px;
-}
-.headerNavitem {
-  font-size: 16px;
-  color: #fff;
-}
 .section {
   max-width: 1500px;
   margin: 40px auto;
@@ -54,13 +11,15 @@
   margin-bottom: 40px;
 }
 .cardArea {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
+  row-gap: 3rem;
 }
 .cardItem {
   height: 28vh;
+  width: 280px;
+  margin: 0 auto;
   flex-direction: column;
   flex-basis: 18%;
   word-wrap: break-word;

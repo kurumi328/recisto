@@ -14,14 +14,12 @@ const Create = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const recipe = await supabase
-      .from("recipes")
-      .insert({
-        user_id: 1,
-        title: title,
-        ingredients: ingredients,
-        content: content,
-      });
+    const recipe = await supabase.from("recipes").insert({
+      user_id: 1,
+      title: title,
+      ingredients: ingredients,
+      content: content,
+    });
 
     router.push("/");
   };
