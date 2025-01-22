@@ -21,7 +21,11 @@ export default function Home() {
       <h1 className={styles.heading}>ALL</h1>
       <div className={styles.cardArea}>
         {recipes.map((recipe) => (
-          <Link key={recipe.recipe_id} className={styles.cardItem} href={`recipes/${recipe.recipe_id}`}>
+          <Link
+            key={recipe.recipe_id}
+            className={styles.cardItem}
+            href={`recipes/${recipe.recipe_id}`}
+          >
             <div className={styles.imgBox}>
               <img
                 className={styles.cardItemImg}
