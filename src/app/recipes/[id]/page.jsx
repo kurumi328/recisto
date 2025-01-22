@@ -1,7 +1,28 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
+import { useParams } from "next/navigation";
+import { supabase } from "../../utils/supabase/client";
 
 export default function Recipe() {
+  const [recipe, setRecipe] = useState(null);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchRecipe = async () => {
+      const { data } = await supabase
+        .from("recipes")
+        .select("*")
+        .eq("recipe_id", id)
+        .single();
+
+      setRecipe(data);
+    };
+
+    fetchRecipe();
+  }, []);
+
   return (
     <div className={styles.flex}>
       <div className={styles.imgBox}>
@@ -12,7 +33,7 @@ export default function Recipe() {
         />
       </div>
       <div className={styles.recipe}>
-        <h1 className={styles.recipeTitle}>グリーンカレー</h1>
+        <h1 className={styles.recipeTitle}>{recipe?.title}</h1>
         <div className={styles.categoryWrap}>
           <div className={styles.category}>カレー</div>
           <div className={styles.category}>カレー</div>
