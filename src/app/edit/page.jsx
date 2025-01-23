@@ -24,11 +24,10 @@ const Create = () => {
     router.push("/");
   };
 
- // const recipe = await supabase
- // .from("recipes")
- // .delete()
- // .in('recipe_id', [1, 2, 3])
-
+  // const recipe = await supabase
+  // .from("recipes")
+  // .delete()
+  // .in('recipe_id', [1, 2, 3])
 
   return (
     <div className={styles.flex}>

@@ -47,16 +47,19 @@
   padding: 6px 0;
   text-align: right;
 }
-.stepList li {
+.stepList {
   border-bottom: dotted 1px #847e7e;
+  max-height: 400px;
+  overflow-wrap: break-word;
+  overflow: scroll;
   padding: 6px 0;
   margin-left: 20px;
 }
 
-.createButton{
+.createButton {
   background: #ea8820d5;
   width: 30%;
-  margin-top: 300px;
+  margin-top: 32px;
   margin-left: 450px;
   border: none;
   border-radius: 5px;
