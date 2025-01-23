@@ -35,13 +35,9 @@ export default function Recipe() {
       <div className={styles.recipe}>
         <h1 className={styles.recipeTitle}>{recipe?.title}</h1>
         <h2 className={styles.contentTitle}>材料</h2>
-        <dl className={styles.ingredientList}>
-          {recipe?.ingredientList}
-        </dl>
+        <dl className={styles.ingredientList}>{recipe?.ingredients}</dl>
         <h2 className={styles.contentTitle}>作り方</h2>
-        <div className={styles.stepList}>
-          {recipe?.content}
-        </div>
+        <div className={styles.stepList}>{recipe?.content}</div>
         <button className={styles.createButton}>レシピを編集する</button>
       </div>
     </div>
