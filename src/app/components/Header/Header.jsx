@@ -7,6 +7,7 @@ export function Header() {
         <div className={styles.appName}>ReciSto</div>
         <div className={styles.headerNavgroup}>
           <div className={styles.headerNavitem}>ALL</div>
+
           <div className={styles.headerNavitem}>MyPage</div>
           <div className={styles.headerNavitem}>Record Recipes</div>
         </div>
