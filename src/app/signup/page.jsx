@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-export default function Home() {
+export default function SignUp() {
   return (
     <div className={styles.formContainer}>
       <div className={styles.uiForm}>
