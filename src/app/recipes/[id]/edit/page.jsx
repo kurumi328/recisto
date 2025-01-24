@@ -3,12 +3,15 @@
 import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
 import { supabase } from "../../../utils/supabase/client";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 
-export default function Edit ()  {
-  const [recipe, setRecipe] = useState(null);
+export default function Edit() {
+  const [title, setTitle] = useState("");
+  const [ingredients, setIngredients] = useState("");
+  const [content, setContent] = useState("");
   const { id } = useParams();
-  
+  const router = useRouter();
+
   useEffect(() => {
     const fetchRecipe = async () => {
       const { data } = await supabase
@@ -17,29 +20,31 @@ export default function Edit ()  {
         .eq("recipe_id", id)
         .single();
 
-      setRecipe(data);
+      setTitle(data.title);
+      setIngredients(data.ingredients);
+      setContent(data.content);
     };
 
     fetchRecipe();
   }, []);
 
-  //const handleSubmit = async (e) => {
-   // e.preventDefault();
+  const handleUpdateSubmit = async () => {
+    const { error } = await supabase
+      .from("recipes")
+      .update({ title: title, ingredients: ingredients, content: content })
+      .eq("recipe_id", id)
+      .select();
 
-   // const recipe = await supabase.from("recipes").delete({
-      //user_id: 1,
-    //  title: title,
-    ///  ingredients: ingredients,
-    //  content: content,
-  //  });
+    router.push(`/recipes/${id}`);
+  };
 
- //   router.push("/");
- // };
-
-  // const recipe = await supabase
-  // .from("recipes")
-  // .delete()
-  // .in('recipe_id', [1, 2, 3])
+  const handleDeleteSubmit = async () => {
+    const response = await supabase
+      .from("recipes")
+      .delete()
+      .eq("recipe_id", id);
+    router.push("/");
+  };
 
   return (
     <div className={styles.flex}>
@@ -48,15 +53,16 @@ export default function Edit ()  {
       </div>
       <div className={styles.recipe}>
         <h1 className={styles.heading}>レシピを編集する</h1>
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form>
           <div className={styles.uiForm}>
             <div>
               <label className={styles.label} htmlFor="title">
-              {recipe?.title}
+                レシピタイトル
               </label>
               <input
                 type="text"
                 id="title"
+                value={title}
                 className={styles.recipeTitleInput}
                 onChange={(e) => setTitle(e.target.value)}
               />
@@ -69,7 +75,8 @@ export default function Edit ()  {
               <textarea
                 type="text"
                 id="ingredients"
-                placeholder={recipe?.ingredients}
+                value={ingredients}
+                placeholder="材料を入力..."
                 className={styles.ingredientInput}
                 onChange={(e) => setIngredients(e.target.value)}
               ></textarea>
@@ -81,18 +88,29 @@ export default function Edit ()  {
               <textarea
                 type="text"
                 id="content"
-                placeholder="{recipe?.content}"
+                value={content}
+                placeholder="手順を入力..."
                 className={styles.contentInput}
                 onChange={(e) => setContent(e.target.value)}
               ></textarea>
             </div>
           </div>
-          <button className={styles.createButton}>登録</button>
-          <button className={styles.editButton}>レシピを削除する</button>
+          <button
+            type="button"
+            className={styles.createButton}
+            onClick={handleUpdateSubmit}
+          >
+            更新
+          </button>
+          <button
+            type="button"
+            className={styles.editButton}
+            onClick={handleDeleteSubmit}
+          >
+            レシピを削除する
+          </button>
         </form>
       </div>
     </div>
   );
-};
-
-
+}

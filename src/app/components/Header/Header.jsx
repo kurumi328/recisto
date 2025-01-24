@@ -6,9 +6,8 @@ export function Header() {
       <div className={styles.headerInner}>
         <div className={styles.appName}>ReciSto</div>
         <div className={styles.headerNavgroup}>
-          <Link to="/"
           <div className={styles.headerNavitem}>ALL</div>
-          </Link>
+
           <div className={styles.headerNavitem}>MyPage</div>
           <div className={styles.headerNavitem}>Record Recipes</div>
         </div>

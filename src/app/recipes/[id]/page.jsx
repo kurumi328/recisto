@@ -6,7 +6,6 @@ import { useParams } from "next/navigation";
 import { supabase } from "../../utils/supabase/client";
 import Link from "next/link";
 
-
 export default function Recipe() {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
@@ -25,8 +24,6 @@ export default function Recipe() {
     fetchRecipe();
   }, []);
 
-
-
   return (
     <div className={styles.flex}>
       <div className={styles.imgBox}>
@@ -42,10 +39,8 @@ export default function Recipe() {
         <dl className={styles.ingredientList}>{recipe?.ingredients}</dl>
         <h2 className={styles.contentTitle}>作り方</h2>
         <div className={styles.stepList}>{recipe?.content}</div>
-        <Link
-            href={`${recipe?.recipe_id}/edit`}
-          >
-        <button className={styles.createButton}>レシピを編集する</button>
+        <Link href={`${recipe?.recipe_id}/edit`}>
+          <button className={styles.createButton}>レシピを編集する</button>
         </Link>
       </div>
     </div>
