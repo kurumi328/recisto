@@ -1,28 +1,40 @@
 "use client";
 
 import styles from "./styles.module.css";
-import React, { useState } from "react";
-import { supabase } from "../utils/supabase/client";
+import { useEffect, useState } from "react";
+import { supabase } from "../../../utils/supabase/client";
 import { useRouter } from "next/navigation";
 
-const Create = () => {
-  const [title, setTitle] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [content, setContent] = useState("");
-  const router = useRouter();
+export default function Edit ()  {
+  const [recipe, setRecipe] = useState(null);
+  const { id } = useParams();
+  
+  useEffect(() => {
+    const fetchRecipe = async () => {
+      const { data } = await supabase
+        .from("recipes")
+        .select("*")
+        .eq("recipe_id", id)
+        .single();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+      setRecipe(data);
+    };
 
-    const recipe = await supabase.from("recipes").insert({
-      user_id: 1,
-      title: title,
-      ingredients: ingredients,
-      content: content,
-    });
+    fetchRecipe();
+  }, []);
 
-    router.push("/");
-  };
+  //const handleSubmit = async (e) => {
+   // e.preventDefault();
+
+   // const recipe = await supabase.from("recipes").delete({
+      //user_id: 1,
+    //  title: title,
+    ///  ingredients: ingredients,
+    //  content: content,
+  //  });
+
+ //   router.push("/");
+ // };
 
   // const recipe = await supabase
   // .from("recipes")
@@ -40,7 +52,7 @@ const Create = () => {
           <div className={styles.uiForm}>
             <div>
               <label className={styles.label} htmlFor="title">
-                レシピタイトル
+              {recipe?.title}
               </label>
               <input
                 type="text"
@@ -57,7 +69,7 @@ const Create = () => {
               <textarea
                 type="text"
                 id="ingredients"
-                placeholder="材料を入力..."
+                placeholder={recipe?.ingredients}
                 className={styles.ingredientInput}
                 onChange={(e) => setIngredients(e.target.value)}
               ></textarea>
@@ -69,7 +81,7 @@ const Create = () => {
               <textarea
                 type="text"
                 id="content"
-                placeholder="手順を入力..."
+                placeholder="{recipe?.content}"
                 className={styles.contentInput}
                 onChange={(e) => setContent(e.target.value)}
               ></textarea>
@@ -83,4 +95,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+
