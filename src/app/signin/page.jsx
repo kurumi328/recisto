@@ -17,11 +17,7 @@ export default function SignIn() {
     e.preventDefault();
 
     try {
-      await signInWithEmailAndPassword(
-        auth,
-        email,
-        password,
-      );
+      await signInWithEmailAndPassword(auth, email, password);
 
       router.push("/");
     } catch (error) {
