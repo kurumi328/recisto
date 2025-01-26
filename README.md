@@ -38,5 +38,5 @@ Material UI
 Supabase  
 Firebase  
 
--ツール 
+-ツール   
 GitHub
