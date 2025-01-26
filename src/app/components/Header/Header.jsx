@@ -18,19 +18,22 @@ export function Header() {
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div className={styles.header}>
       <div className={styles.headerInner}>
         <div className={styles.appName}>ReciSto</div>
         <div className={styles.headerNavgroup}>
-          <div className={styles.headerNavitem}>ALL</div>
-
-          <div className={styles.headerNavitem}>MyPage</div>
-          <div className={styles.headerNavitem}>Record Recipes</div>
-
-          {user && <button type="button" onClick={handleSignout}>ログアウト</button>}
+          {user && (
+            <button
+              type="button"
+              className={styles.button}
+              onClick={handleSignout}
+            >
+              LOGOUT
+            </button>
+          )}
         </div>
       </div>
     </div>

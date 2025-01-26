@@ -41,3 +41,16 @@
   font-size: 16px;
   color: #fff;
 }
+
+.button {
+  background: #53a08c;
+  border: none;
+  border-radius: 5px;
+  color: rgb(79, 66, 22);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #9cc5b1d5;
+}
