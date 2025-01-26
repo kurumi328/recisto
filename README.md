@@ -35,10 +35,8 @@ Next.js
 Material UI    
 
 -バックエンド  
-
 Supabase  
 Firebase  
 
 -ツール 
-
 GitHub
