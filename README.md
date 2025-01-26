@@ -29,15 +29,15 @@ ID（メールアドレス）：
 フロントエンド
 
 ・HTML / CSS
-JavaScript
-TypeScript
-React
-Next.js
-Material UI  
+JavaScript  
+TypeScript  
+React  
+Next.js  
+Material UI    
 ・バックエンド  
 
-Supabase
+Supabase  
 Firebase
-ツール
+ツール  
 
 GitHub
