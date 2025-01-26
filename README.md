@@ -28,13 +28,13 @@ ID（メールアドレス）：
 ### 使用言語・ツール
 フロントエンド
 
-HTML / CSS
+・HTML / CSS
 JavaScript
 TypeScript
 React
 Next.js
-Material UI
-バックエンド
+Material UI  
+・バックエンド  
 
 Supabase
 Firebase
