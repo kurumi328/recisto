@@ -26,18 +26,17 @@ ID（メールアドレス）：
 レシピ登録、編集、削除
 ログイン認証機能  
 ### 使用言語・ツール
-フロントエンド
-
-・HTML / CSS
+*フロントエンド*  
+HTML / CSS
 JavaScript  
 TypeScript  
 React  
 Next.js  
 Material UI    
-・バックエンド  
+*バックエンド*  
 
 Supabase  
 Firebase
-ツール  
+*ツール*  
 
 GitHub
