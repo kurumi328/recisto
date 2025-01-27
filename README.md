@@ -9,10 +9,12 @@
 自分だけのオリジナルレシピ集。
 
 ### URL
+https://recisto.vercel.app/
 
-テスト用IDとパスワード
-ID（メールアドレス）：  
-パスワード：
+
+*テスト用IDとパスワード*
+ID（メールアドレス）：test@example.com  
+パスワード：password
 
 ### アプリ機能一覧
 
@@ -22,7 +24,7 @@ ID（メールアドレス）：
 
 ### 使用言語・ツール
 
--フロントエンド  
+- フロントエンド  
 HTML / CSS  
 JavaScript  
 TypeScript  
@@ -30,11 +32,11 @@ React
 Next.js  
 Material UI
 
--バックエンド  
+- バックエンド  
 Supabase  
 Firebase
 
--ツール  
+- ツール  
 GitHub
 
 ## 今後の実装予定
