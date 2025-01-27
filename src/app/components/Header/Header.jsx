@@ -5,6 +5,7 @@ import { auth } from "../../../libs/Firebase";
 import styles from "./styles.module.css";
 import { signOut } from "firebase/auth";
 import { useAuthContext } from "../../../contexts/AuthContext";
+import Link from "next/link";
 
 export function Header() {
   const router = useRouter();
@@ -25,7 +26,7 @@ export function Header() {
       <div className={styles.headerInner}>
         <div className={styles.appName}>ReciSto</div>
         <div className={styles.headerNavgroup}>
-          {user && (
+          {user ? (
             <button
               type="button"
               className={styles.button}
@@ -33,6 +34,17 @@ export function Header() {
             >
               LOGOUT
             </button>
+          ) : (
+            <div className={styles.button_group}>
+              <Link href="/signIn">
+                <button type="button" className={styles.button}>
+                  SIGNIN
+                </button>
+              </Link>
+              <Link href="/signUp">
+                <button type="button" className={styles.button}>SIGNUP</button>
+              </Link>
+            </div>
           )}
         </div>
       </div>

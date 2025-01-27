@@ -42,6 +42,10 @@
   color: #fff;
 }
 
+.button_group {
+  display: flex;
+  gap: 16px;
+}
 .button {
   background: #53a08c;
   border: none;
