@@ -29,8 +29,8 @@ export default function Home() {
             <div className={styles.imgBox}>
               <img
                 className={styles.cardItemImg}
-                src="./images/pc01.png"
-                alt=""
+                src="./images/greencurry.png"
+                alt="recipe_img"
               />
             </div>
             <div className={styles.cardItems}>
