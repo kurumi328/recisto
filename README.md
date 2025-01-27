@@ -11,7 +11,6 @@
 ### URL
 https://recisto.vercel.app/
 
-
 *テスト用IDとパスワード*
 ID（メールアドレス）：test@example.com  
 パスワード：password
@@ -20,21 +19,20 @@ ID（メールアドレス）：test@example.com
 
 料理一覧表示
 レシピ登録、編集、削除  
-ログイン認証機能
+認証機能（サインアップ、サインイン、ログアアウト）
 
 ### 使用言語・ツール
 
-- フロントエンド  
-HTML / CSS  
-JavaScript  
-TypeScript  
-React  
-Next.js  
-Material UI
+*フロントエンド*
+- HTML / CSS  
+- JavaScript  
+- TypeScript  
+- React  
+- Next.js  
 
-- バックエンド  
-Supabase  
-Firebase
+*バックエンド*
+- Supabase
+- Firebase
 
 - ツール  
 GitHub
