@@ -15,7 +15,7 @@ export function Header() {
     try {
       await signOut(auth);
 
-      router.push("/signIn");
+      router.push("/signin");
     } catch (error) {
       console.log(error);
     }
@@ -36,12 +36,12 @@ export function Header() {
             </button>
           ) : (
             <div className={styles.button_group}>
-              <Link href="/signIn">
+              <Link href="/signin">
                 <button type="button" className={styles.button}>
                   SIGNIN
                 </button>
               </Link>
-              <Link href="/signUp">
+              <Link href="/signup">
                 <button type="button" className={styles.button}>SIGNUP</button>
               </Link>
             </div>

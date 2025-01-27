@@ -51,7 +51,7 @@ export default function SignIn() {
           </button>
         </form>
 
-        <Link href={"/signUp"} className={styles.signup}>
+        <Link href={"/signup"} className={styles.signup}>
           アカウントをお持ちでない場合は登録
         </Link>
       </div>
