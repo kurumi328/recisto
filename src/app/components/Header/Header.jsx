@@ -27,13 +27,23 @@ export function Header() {
         <div className={styles.appName}>ReciSto</div>
         <div className={styles.headerNavgroup}>
           {user ? (
-            <button
-              type="button"
-              className={styles.button}
-              onClick={handleSignout}
-            >
-              LOGOUT
-            </button>
+            <div className={styles.button_group}>
+              <Link href="/create">
+                <button
+                  type="button"
+                  className={styles.button}
+                >
+                  Recipe Create
+                </button>
+              </Link>
+              <button
+                type="button"
+                className={styles.button}
+                onClick={handleSignout}
+              >
+                LOGOUT
+              </button>
+            </div>
           ) : (
             <div className={styles.button_group}>
               <Link href="/signin">
@@ -42,7 +52,9 @@ export function Header() {
                 </button>
               </Link>
               <Link href="/signup">
-                <button type="button" className={styles.button}>SIGNUP</button>
+                <button type="button" className={styles.button}>
+                  SIGNUP
+                </button>
               </Link>
             </div>
           )}
