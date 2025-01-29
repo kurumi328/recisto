@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import { useEffect, useState } from "react";
 import { supabase } from "./utils/supabase/client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
@@ -27,9 +28,11 @@ export default function Home() {
             href={`recipes/${recipe.recipe_id}`}
           >
             <div className={styles.imgBox}>
-              <img
+              <Image
                 className={styles.cardItemImg}
-                src="./images/greencurry.png"
+                width={100}
+                height={100}
+                src="/images/greencurry.png"
                 alt="recipe_img"
               />
             </div>

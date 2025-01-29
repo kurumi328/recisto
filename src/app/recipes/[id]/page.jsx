@@ -5,6 +5,7 @@ import styles from "./styles.module.css";
 import { useParams } from "next/navigation";
 import { supabase } from "../../utils/supabase/client";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Recipe() {
   const [recipe, setRecipe] = useState(null);
@@ -27,10 +28,12 @@ export default function Recipe() {
   return (
     <div className={styles.flex}>
       <div className={styles.imgBox}>
-        <img
+        <Image
           className={styles.recipeImg}
-          src="./images/greencurry.png"
-          alt=""
+          width={100}
+          height={100}
+          src="/images/greencurry.png"
+          alt="recipe_img"
         />
       </div>
       <div className={styles.recipe}>
