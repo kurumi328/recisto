@@ -17,7 +17,7 @@ ID（メールアドレス）：test@example.com
 
 ### テーマ
 
-[テーマはこちら](documents/THEMA.md)
+[テーマはこちら](documents/THEME.md)
 
 ### 要件定義
 
