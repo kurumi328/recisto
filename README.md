@@ -15,6 +15,14 @@ https://recisto.vercel.app/
 ID（メールアドレス）：test@example.com  
 パスワード：password
 
+### テーマ
+
+[テーマはこちら](documents/THEMA.md)
+
+### 要件定義
+
+[要件定義はこちら](documents/REQUIREMENT_DEFINITION.md)
+
 ### アプリ機能一覧
 
 料理一覧表示
