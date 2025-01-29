@@ -24,7 +24,9 @@ export function Header() {
   return (
     <div className={styles.header}>
       <div className={styles.headerInner}>
-        <div className={styles.appName}>ReciSto</div>
+        <div className={styles.appName}>
+          <Link href="/">ReciSto</Link>
+        </div>
         <div className={styles.headerNavgroup}>
           {user ? (
             <div className={styles.button_group}>
